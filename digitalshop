@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide pour travailler vos personas</title>
+<style>
+  /* Global */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8d1a3;
+    color: #333;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+  }
+
+  .left, .right {
+    border-radius: 8px;
+  }
+
+  .left {
+    width: 55%;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .right {
+    width: 40%;
+    background-color: #1a1f2b;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input, select, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    outline: 2px solid #4CAF50;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: #1a1f2b;
+    font-weight: bold;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .left, .right {
+      width: 100%;
+    }
+    .right {
+      margin-top: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <h1>Psssst… Ce guide va vous aider à mieux travailler vos personas 😉</h1>
+    <p>Il est très complet et vous donne toutes les clés pour bien travailler vos personas :</p>
+    <ul>
+      <li>La méthode en 4 étapes pour bien travailler votre persona 📌</li>
+      <li>Nos astuces pour mener vos entretiens persona 🧑‍💼</li>
+      <li>Une série de 50+ questions à poser ❓</li>
+      <li>Une template de fiche et un exemple expliqué 📝</li>
+    </ul>
+    <p><em>(Nos concurrents vont le télécharger, c’est certain. Alors profitez-en au maximum !)</em></p>
+  </div>
+  <div class="right">
+    <h2>Let's Go, c'est offert !</h2>
+    <form id="personaForm">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Nom" required>
+
+      <label for="entreprise">Nom de l'entreprise</label>
+      <input type="text" id="entreprise" name="entreprise" placeholder="Nom de l'entreprise" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="priorite">Votre priorité du moment</label>
+      <select id="priorite" name="priorite" required>
+        <option value="">Sélectionnez</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Commercial">Commercial</option>
+        <option value="Autre">Autre</option>
+      </select>
+
+      <button type="submit">VALIDER</button>
+      <p id="confirmation" style="display:none; margin-top:10px; color:#4CAF50;">Merci pour votre inscription ! 🚀</p>
+    </form>
+  </div>
+</div>
+<div class="footer">
+🚀 DONNEZ UNE NOUVELLE DIMENSION À VOS STRATÉGIES MARKETING ET COMMERCIALE EN TRAVAILLANT FINEMENT SUR DES PERSONAS COMPLETS ET FIABLES !
+</div>
+
+<script>
+  const form = document.getElementById('personaForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('confirmation').style.display = 'block';
+  });
+</script>
+</body>
+</html>
+index.html
